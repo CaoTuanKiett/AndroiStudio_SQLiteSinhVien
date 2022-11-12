@@ -22,8 +22,8 @@ public class DbHelper extends SQLiteOpenHelper {
         db.execSQL(sqlSVCreate);
 
 
-
     }
+
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {

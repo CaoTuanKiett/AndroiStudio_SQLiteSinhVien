@@ -82,6 +82,7 @@ public class EditActivity extends AppCompatActivity {
                 sinhVien.setGioiTinh(gioiTinh);
                 svDAO.CapNhatSinhVien(sinhVien);
 
+                Toast.makeText(EditActivity.this,"Cập nhật thành công", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -102,6 +103,7 @@ public class EditActivity extends AppCompatActivity {
                         sinhVien.setGioiTinh(gioiTinh);
                         svDAO.XoaSinhVien(sinhVien);
 
+                        Toast.makeText(EditActivity.this,"Xóa thành công", Toast.LENGTH_SHORT).show();
                         finish();
                     }
                 });
@@ -109,7 +111,7 @@ public class EditActivity extends AppCompatActivity {
                 builder.setNegativeButton("Không", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-
+                        Toast.makeText(EditActivity.this,"Xóa thất bại", Toast.LENGTH_SHORT).show();
                     }
                 });
 

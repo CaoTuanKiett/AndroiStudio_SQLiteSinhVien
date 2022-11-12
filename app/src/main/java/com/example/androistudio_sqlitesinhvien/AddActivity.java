@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
 import com.example.androistudio_sqlitesinhvien.dao.SinhVienDAO;
 import com.example.androistudio_sqlitesinhvien.model.SinhVien;
@@ -54,6 +55,8 @@ public class AddActivity extends AppCompatActivity {
                 String SDT = edtSDT.getText().toString();
                 SinhVien sv = new SinhVien(hoTen,gioiTinh,SDT,email);
                 svDao.ThemSinhVien(sv);
+                Toast.makeText(AddActivity.this,"Thêm thành công", Toast.LENGTH_SHORT).show();
+                finish();
             }
         });
 
